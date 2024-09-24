@@ -1,4 +1,4 @@
-# TachiyomiSYPreview
-A download host for TachiyomiSY Preview builds
+# MewtachiPreview
+A download host for Mewtachi Preview builds
 
-TachiyomiSY: https://github.com/bigbabyboost/TachiyomiSY/
+Mewtachi: https://github.com/bigbabyboost/Mewtachi/
