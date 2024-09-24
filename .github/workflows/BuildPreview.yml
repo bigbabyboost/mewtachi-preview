@@ -1,10 +1,20 @@
 name: Remote Dispatch Build App
 
-on: [repository_dispatch]
+on:
+  # Dispatch or Manual triggers
+  workflow_dispatch:
+    inputs:
+      git-ref:
+        description: Git Ref to build ('master' for standard preview release, any other for dev preview pre-release)
+        required: false
+      dry-run:
+        description: Creates a draft release (any value would create a draft)
+        required: false
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.event.inputs.git-ref }}
   cancel-in-progress: true
+
 
 jobs:
   build-app:
